@@ -1,13 +1,16 @@
-import React, {useState, useEffect, useContext} from 'react'
+import React, { useState, useEffect, useContext, useMemo } from 'react'
 import { CounterContext } from '../service/context';
 const Home = () => {
-  const {setTimeLoaded} = useContext(CounterContext)
+  const { setTimeLoaded } = useContext(CounterContext)
   const [time, setTime] = useState(0);
   const [isActive, setIsActive] = useState(true);
 
   // This will run one time after the component mounts
-  useEffect(() => {
+  useMemo(() => {
     console.log("Hello World");
+  }, [])
+
+  useEffect(() => {
     const onPageLoad = () => {
       setIsActive(false)
     };
@@ -29,7 +32,7 @@ const Home = () => {
     return () => {
       clearInterval(interval);
     };
-  }, [ isActive, time ,setTimeLoaded]);
+  }, [isActive, time, setTimeLoaded]);
 
   return (
     <div>
