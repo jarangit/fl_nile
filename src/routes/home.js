@@ -7,6 +7,7 @@ const Home = () => {
 
   // This will run one time after the component mounts
   useEffect(() => {
+    console.log("Hello World");
     const onPageLoad = () => {
       setIsActive(false)
     };
@@ -32,7 +33,7 @@ const Home = () => {
 
   return (
     <div>
-      this home page or page1
+      This home page or page1
       then I console log "Hello world!"
     </div>
   )

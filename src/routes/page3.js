@@ -7,7 +7,7 @@ const Page3 = () => {
     <div>
       <div>Page3</div>
       <div>This is count form second page: {count}</div>
-      <div>This time load: {timeLoaded} ms</div>
+      <div>This time loaded: {timeLoaded} ms</div>
     </div>
   )
 }
